@@ -1,10 +1,8 @@
 from flask import Flask, request
 import pymysql
-from rest_app import REST
 import db_connector
 import rest_app
 app = Flask(__name__)
-app.register_blueprint(REST)
 
 @app.route('/users/get_user_name/<user_id>',methods=['GET'])
 def get_user_name(user_id):
