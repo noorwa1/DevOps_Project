@@ -1,9 +1,9 @@
-from flask import request, Blueprint, jsonify
+from flask import request, jsonify, Flask
 import db_connector
 from datetime import datetime as time
-REST = Blueprint('REST_API', __name__, template_folder='templates')
+app = Flask(__name__)
 
-@REST.route('/users/<user_id>', methods=['GET', 'POST', 'PUT', 'DELETE'])
+@app.route('/users/<user_id>', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def user(user_id):
     if request.method == "GET":
         return get_request(user_id)
@@ -63,3 +63,7 @@ def delete_request(user_id):
         payload={"status":"error","reason":"no such id"}
         code_status=500
     return jsonify(payload),code_status
+
+
+if __name__=="__main__":
+    app.run(host='127.0.0.1', debug=True, port=5500)
