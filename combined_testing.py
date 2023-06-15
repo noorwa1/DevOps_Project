@@ -30,8 +30,8 @@ options.binary_location = "C:\\Program Files\\Google\\Chrome\\Application\\Chrom
 options.add_argument("chromedriver.exe")  # Path to the chromedriver executable
 driver = drive.Chrome(options=options)
 '''
-driver=drive.Chrome(service=Service("C:/Users/noorw/Downloads/chromedriver_win32/chromedriver.exe"))
-driver.get(f'http:/127.0.0.1:5501/users/get_user_name/{data_from_DB[0]}')
+driver=drive.Chrome(service=Service("C:\\Users\\noorw\\Downloads\\chromedriver_win32\\chromedriver.exe"))
+driver.get(f'http://127.0.0.1:5501/users/get_user_name/{data_from_DB[0]}')
 id_element=driver.find_element(By.ID,value='name')
 print(id_element.text)
 if id_element.text!=data_from_DB[1]:
