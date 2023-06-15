@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 
 
-driver = webdriver.Chrome("C:/Users/noorw/OneDrive/Desktop/web drivers/chromedriver.exe")
+driver = webdriver.Chrome("chromedriver.exe")
 driver.get("http://127.0.0.1:5500/users/get_user_name/2")
 
 try:
@@ -10,4 +10,4 @@ try:
     print(id_element.text)
 
 except Exception as e:
-    print(e.with_traceback())
+    print(e.with_traceback
