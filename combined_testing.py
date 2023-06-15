@@ -19,7 +19,7 @@ try:
 except :
     print(Exception.with_traceback())
 
-webdriver.get(f'http://127.0.0.1:5501/users/get_user_name/{data_from_DB[0]}')
+webdriver.get(f'http://127.0.0.1:5501//users//get_user_name//{data_from_DB[0]}')
 id_element=webdriver.find_element(By.ID,value='name')
 if id_element.text!=data_from_DB[1]:
     raise Exception("test faild")
