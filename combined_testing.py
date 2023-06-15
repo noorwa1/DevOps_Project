@@ -34,5 +34,5 @@ driver=drive.Chrome(service=Service("C:/Users/noorw/Downloads/chromedriver_win32
 driver.get(f'http://127.0.0.1:5501/users/get_user_name/1')
 id_element=driver.find_element(By.ID,value='name')
 print(id_element.text)
-if id_element.text!=data_from_DB[1]:
+if id_element.text!=db_connector.get_all_data(1)[1]:
     raise Exception("test faild")
