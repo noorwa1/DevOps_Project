@@ -6,13 +6,15 @@ pipeline {
                 git "https://github.com/noorwa1/DevOps_Project"
             }
         }
-        stage("Build"){
-
-                steps {
+        stage("run backend server"){
+            steps {
                     bat "start /min python rest_app.py"
-                    bat "start /min python web_app.py"
-
-                }
+            }
+        }
+        stage("run frontend server"){
+            steps{
+                bat "start /min python web_app.py"
+            }
         }
 
         stage("testing"){
