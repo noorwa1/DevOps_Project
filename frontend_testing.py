@@ -9,7 +9,7 @@ options.add_argument("chromedriver.exe")  # Path to the chromedriver executable
 driver = webdriver.Chrome(options=options)
 print(driver.title)
 '''
-driver = webdriver.Chrome(service=Service("C:\\Users\\noorw\\Downloads\\chromedriver_win32\\chromedriver.exe"))
+driver = webdriver.Chrome(service=Service("C:/Users/noorw/Downloads/chromedriver_win32/chromedriver.exe"))
 driver.get("http://127.0.0.1:5501/users/get_user_name/2")
 
 try:
