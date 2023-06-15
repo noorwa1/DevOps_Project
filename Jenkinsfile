@@ -9,7 +9,7 @@ pipeline {
         stage("Build"){
 
                 steps {
-                    bat "python rest_app.py"
+                    bat "start /min python rest_app.py"
 
                 }
         }
