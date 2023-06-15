@@ -3,7 +3,7 @@ from selenium import webdriver
 
 
 options = webdriver.ChromeOptions()
-options.binary_location = "C:\\Program Files\\Google\\Chrome\\Application\\Chrome.exe"
+options.binary_location = "C:\\Users\\noorw\\Downloads\\chromedriver_win32\\chromedriver.exe"
 options.add_argument("chromedriver.exe")  # Path to the chromedriver executable
 driver = webdriver.Chrome(options=options)
 print(driver.title)
