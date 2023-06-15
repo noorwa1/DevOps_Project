@@ -10,4 +10,4 @@ try:
     print(id_element.text)
 
 except Exception as e:
-    print(e.with_traceback
+    print(e.with_traceback)
