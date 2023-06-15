@@ -4,7 +4,7 @@ import os
 
 
 
-driver = webdriver.Chrome("C:\\Users\\noorw\\Downloads\\chromedriver_win32\\chromedriver.exe")
+driver = webdriver.Chrome(executable_path="C:\\Users\\noorw\\Downloads\\chromedriver_win32\\chromedriver.exe")
 driver.get("http://127.0.0.1:5500/users/get_user_name/2")
 
 try:
