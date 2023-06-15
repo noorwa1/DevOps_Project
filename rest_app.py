@@ -1,6 +1,8 @@
 from flask import request, jsonify, Flask
 import db_connector
 from datetime import datetime as time
+import os,signal
+
 app = Flask(__name__)
 
 @app.route('/users/<user_id>', methods=['GET', 'POST', 'PUT', 'DELETE'])
@@ -63,6 +65,13 @@ def delete_request(user_id):
         payload={"status":"error","reason":"no such id"}
         code_status=500
     return jsonify(payload),code_status
+
+
+@app.route('/stop_server')
+def stop_server():
+    os.kill(os.getpid(),signal.CTRL_C_EVENT)
+    return 'Server stopped'
+
 
 
 if __name__=="__main__":
