@@ -1,13 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
-import os
 
-s=os.path.abspath("chromedriver.exe")
 
-ss=s.replace('\\',"/")
-
-driver = webdriver.Chrome(ss)
-
+driver = webdriver.Chrome("C:/Users/noorw/OneDrive/Desktop/web drivers/chromedriver.exe")
 driver.get("http://127.0.0.1:5500/users/get_user_name/2")
 
 try:
