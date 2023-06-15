@@ -2,7 +2,12 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 import os
 
-driver = webdriver.Chrome(os.patch.abspath('chromedriver.exe'))
+s=os.path.abspath("chromedriver.exe")
+
+ss=s.replace('\\',"/")
+
+driver = webdriver.Chrome(ss)
+
 driver.get("http://127.0.0.1:5500/users/get_user_name/2")
 
 try:
