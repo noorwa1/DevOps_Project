@@ -4,7 +4,8 @@ webdriver=Chrome()
 req_method='POST'
 
 #sends a post request through webdriver which returns a json response
-response= webdriver.request(req_method,'http://127.0.0.1:5500/users/8',json={'id':8,'user_name':"asd"})
+response= webdriver.request(req_method,'http://127.0.0.1:5500/users/8',json={'id':8,'user_name':"rane"})
+
 #evaluate the response text so we can start using the response data
 request_data=eval(response.text)
 try:
