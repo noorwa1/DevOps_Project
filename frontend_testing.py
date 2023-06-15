@@ -1,7 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
+import os
 
-driver = webdriver.Chrome(executable_patch="C:\\Users\\noorw\\OneDrive\\Desktop\\web drivers\\chromedriver.exe")
+driver = webdriver.Chrome(os.patch.abspath('chromedriver.exe'))
 driver.get("http://127.0.0.1:5500/users/get_user_name/2")
 
 try:
