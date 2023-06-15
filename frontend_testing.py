@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 
 
-driver=webdriver.Chrome(service=Service("C:\\Users\\noorw\\Downloads\\chromedriver_win32\\chromedriver.exe")
+driver = webdriver.Chrome(service=Service("C:\Users\noorw\Downloads\chromedriver_win32\chromedriver.exe"))
 
 driver.get("http://127.0.0.1:5501/users/get_user_name/2")
 
